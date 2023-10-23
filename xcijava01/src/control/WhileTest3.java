@@ -3,26 +3,27 @@ package control;
 public class WhileTest3 {
 
 	public static void main(String[] args) {
+		// 구구단
+		int lineIdx = 0;
+		int firstNum = 2;
+		int secondNum = 1;
 		
-		
-		int c = 0;
-		while (c <= 1)
-		{
-			int second = 1;
-			while (second <= 9)
-			{
-				int first = 2;
-				while (first <= 5)
-				{
-					System.out.print((first + 4 * c) + " * " + second + " = " + (first + 4 * c) * second + "\t");
-					first++;
+		while(lineIdx < 2) {
+			secondNum = 1;
+			while(secondNum < 10) {
+				firstNum = 2;
+				while(firstNum < 6) {
+					System.out.print(firstNum + lineIdx*4 + "*" + secondNum + 
+							"=" + (firstNum + lineIdx*4)*secondNum + "\t");
+					firstNum++;
 				}
+				secondNum++;
 				System.out.println();
-				second++;
 			}
 			System.out.println();
-			c++;
+			lineIdx++;
 		}
+
 	}
 
 }

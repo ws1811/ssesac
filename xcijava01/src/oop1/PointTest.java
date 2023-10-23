@@ -7,6 +7,7 @@ public class PointTest {
 		pt.setX(100);
 		pt.setY(200);
 		pt.setZ(300);
+		
 		pt.print();
 	}
 

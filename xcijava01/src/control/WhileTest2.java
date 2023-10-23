@@ -3,23 +3,26 @@ package control;
 public class WhileTest2 {
 
 	public static void main(String[] args) {
-
-		// 1부터 1000까지 3의 배수의 합계를 구해보세요
-//		int sum = 0;
-//		for (int i = 3; i <= 1000; i += 3)
-//		{
-//			//System.out.printf("[i = %d]\n", i);
-//			sum += i;
-//		}
+		// 1부터 1000까지 정수의 합계
 		int sum = 0;
-		int i = 3;
-		while (i <= 1000)
-		{
-			sum += i;
-			i += 3;
+		int cnt = 1;
+		while(cnt != 1001) {
+			sum += cnt++;
 		}
 		
 		System.out.println(sum);
+		
+		
+		//1부터 1000까지 3의 배수의 합계
+		int sum1 = 0;
+		int cnt1 = 1;
+		
+		while(3*cnt1 <= 1000) {
+			sum1 += 3*cnt1++;
+		}
+		
+		System.out.println(sum1);
+
 	}
 
 }

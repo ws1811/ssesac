@@ -1,7 +1,6 @@
 package basic;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 
 public class PrimitiveTypeTest {
 	public static void main(String[] args) {
@@ -11,30 +10,40 @@ public class PrimitiveTypeTest {
 		byte b2 = 127;
 		System.out.println(b2);
 		
-		char c = '가';  // char 타입 -> single quote(' ')
+		char c = '가';
 		System.out.println(c);
 		
-		short s = 23767;
+		short s = 32767; //int의 1/2배
 		System.out.println(s);
 		
 		int i = 2147483647 + 1;
-		System.out.println(i);
-		
-		long l1 = 2147483648L; //정수 리터럴의 기본 타입 : int(4byte) / 범위를 벗어나는 경우 표시해줘야
+		System.out.println(i); 
+		// -2147483648 int값의 범위를 초과하기 때
+	
+		long l1 = 2147483648L; //int의 2배
 		System.out.println(l1);
 		
-		double p = 3.1415926535;
-		System.out.println(p);
+		double p = 3.1415926536;
+		System.out.println(p); 
 		
-		float f = 3.14159263535f; // 실수 리터럴 기본 타입 : double / float 사용하기 위해선 f 사용
-		System.out.println(f);    // float : double 에 비해 정밀도 떨어짐 (대략 소숫점 7자리)
+		float p2 = 3.1415926536f;
+		System.out.println(p2); //3.1415927
+	
+		System.out.println(2-1.1); //0.8999999999999999
 		
-		System.out.println(2- 1.1);
-		BigDecimal bd1 = new BigDecimal("2");  //조금 더 정밀
-		BigDecimal bd2 = new BigDecimal("1.1"); //리터럴을 넣어주는 순간 깨짐 -> 정확하게 하기 위해선 문자열로
-		System.out.println(bd1.subtract(bd2)); // 그래도 정확한 값은 X 
+		BigDecimal bd1 = new BigDecimal(2);
+		BigDecimal bd2 = new BigDecimal(1.1); // 여기서 깨짐
+		System.out.println(bd1.subtract(bd2)); //0.899999999999999911182158029987476766109466552734375
+	
+		BigDecimal bd3 = new BigDecimal("2");
+		BigDecimal bd4 = new BigDecimal("1.1"); 
+		System.out.println(bd3.subtract(bd4)); // 0.9
 		
 		double pi = Math.PI;
-		System.out.println(pi);
+		System.out.println(pi);//3.141592653589793
+
+		
+	
 	}
+	
 }

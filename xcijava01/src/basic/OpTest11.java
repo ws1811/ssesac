@@ -3,17 +3,11 @@ package basic;
 public class OpTest11 {
 
 	public static void main(String[] args) {
-		int a = 10;
-		a += 2; 
-		System.out.println(a);
-		a -= 2; 
-		System.out.println(a);
-		a *= 2; 
-		System.out.println(a);
-		a /= 2; 
-		System.out.println(a);
-		a %= 2; 
-		System.out.println(a);
+		int n = 2;
+		System.out.println( n == 1 ? "남자" : 
+							n == 2 ? "여자" :
+									 "에러");
+
 	}
 
 }

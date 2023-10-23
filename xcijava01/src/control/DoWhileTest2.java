@@ -8,7 +8,8 @@ public class DoWhileTest2 {
 		do {
 			dice2 = (int) (Math.random() * 6) + 1;
 		} while (dice1 == dice2);
-		System.out.println(dice1 + ", " + dice2);
+		
+		System.out.println(dice1 + "," + dice2);
+		
 	}
-
 }

@@ -2,8 +2,11 @@ package imp;
 
 import exam.lib.Dice;
 
-
 public class DiceTest {
-	Dice dice = new Dice();
+
+	public static void main(String[] args) {
+		Dice dice = new Dice();
+		dice.roll();
+	}
 
 }

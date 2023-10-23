@@ -1,11 +1,10 @@
 package oop1;
 
 public class Point2D {
-	// 필드(멤버 변수)
+	//필드값, property
 	private int x;
 	private int y;
 	
-	//Getter & Setter
 	public int getX() {
 		return x;
 	}
@@ -19,12 +18,18 @@ public class Point2D {
 		this.y = y;
 	}
 	
-	public void print()
-	{
+	public void print() {
 		System.out.println("x = " + this.getX());
 		System.out.println("y = " + this.getY());
-		//System.out.println("z = " + this.getZ());
 	}
+	
+	/*
+	public void setX(int x) {
+		this.x = x;
+	}
+	public int getX(int x) {
+		return x;
+	}
+	*/
+	
 }
-
-
