@@ -1,6 +1,6 @@
 package thread;
 
-class SMIFileThread2 extends Thread {
+class SMIFileRunnable2 implements Runnable{
 	@Override
 	public void run() {
 		// 
@@ -11,11 +11,10 @@ class SMIFileThread2 extends Thread {
 			System.out.println(" -(자막번호) " + strArray[i]);
 			try {Thread.sleep(200);}catch (InterruptedException e) {}
 		}
-		super.run();
 	}
 }
 
-class VideoFileThread extends Thread {
+class VideoFileRunnable implements Runnable {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
@@ -28,16 +27,17 @@ class VideoFileThread extends Thread {
 	}
 }
 
-public class CreateAndStartThread_M1C2 {
+public class CreateAndStartThread_M2C2 {
 	public static void main(String[] args) {
-		// SMIFileThread 객체 생성 및 시작
-		Thread smiFileThread = new SMIFileThread2();
-		smiFileThread.start();
+		// SMIFileRunnable 객체 생성 
+		Runnable smiFileRunnable = new SMIFileRunnable2();
+		Thread thread1 = new Thread(smiFileRunnable);
+		thread1.start();
 		
-		// VideoFileThread 객체 생성 및 시작
-		Thread videoFileThread = new VideoFileThread();
-		videoFileThread.start();
-		
-		}
+		// VideoFileRunnable 객체 생성
+		Runnable videoFileRunnable = new VideoFileRunnable();
+		//videoFileRunnable.start();
+		Thread thread2 = new Thread(videoFileRunnable);
+		thread2.start();
 	}
-
+}
