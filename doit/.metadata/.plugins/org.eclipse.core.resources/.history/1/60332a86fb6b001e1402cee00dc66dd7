@@ -1,0 +1,10 @@
+package sec01_basicsyntax;
+
+public class EX01_JavaBasicStructure {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

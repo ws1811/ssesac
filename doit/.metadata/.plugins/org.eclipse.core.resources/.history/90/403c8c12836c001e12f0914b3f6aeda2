@@ -1,0 +1,10 @@
+package sec01_datatype;
+
+public class NamingVariableAndConstatnt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

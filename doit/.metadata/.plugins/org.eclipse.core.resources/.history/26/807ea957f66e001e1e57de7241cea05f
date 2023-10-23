@@ -1,0 +1,18 @@
+package chap13_innerclass.sec05_innerinterface;
+
+class A {
+	interface B {
+		public abstract void bcd();
+	}
+}
+
+
+
+public class CreateObjectOfInnerInterface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

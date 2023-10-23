@@ -1,0 +1,10 @@
+package chap10_inheritance;
+
+public class Typecasting_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

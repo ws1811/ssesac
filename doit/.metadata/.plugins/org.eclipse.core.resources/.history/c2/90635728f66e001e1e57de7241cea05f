@@ -1,0 +1,10 @@
+package chap13_innerclass.sec05_innerinterface;
+
+public class CreateObjectOfInnerInterface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package sec01_datatype;
+
+public class EX01_UsageOfDataType {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

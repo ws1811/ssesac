@@ -1,0 +1,12 @@
+package chap10_inheritance;
+
+class Human{
+	String name;
+	int age;
+	void eat();
+	void sleep();
+}
+
+public class Inheritance {
+
+}

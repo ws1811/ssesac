@@ -1,0 +1,78 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Test {
+
+	
+	// 10 ~ 35 까지의 수 -> A, B, ... , Z 변환
+	static char trans(int num, int b) {
+		if (num == 1) {
+			return '0';
+		}
+		else if (b <= 10)
+		{
+			// 2~10진법
+			return (char)(48 + num);
+		}
+		char letter = 'A';
+		letter = (char)(letter + (num - 10));
+		return letter;
+	}
+			
+
+	static int pow(int base, int exp) {
+		int i = 0;
+		int result = 1;
+		
+		if (exp == 0)
+		{
+			return 1;
+		}
+		
+		while (i < exp)
+		{
+			result *= base;
+			i++;
+		}
+		return result;
+	}
+	
+	static int getLen(int n, int b)
+	{
+		int len = 0;
+		while (pow(b, len) <= n)
+		{
+			len++;
+		}
+		return len;
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		// 입력
+		// 60466175 36
+		int n = scan.nextInt(); // 수
+		int b = scan.nextInt(); // 진법
+		
+		// 출력 : 첫째 줄에 10진법 수 N을 B진법으로 출력한다.
+		// ZZZZZ
+
+		
+		int len = getLen(n, b);
+		//System.out.println("*** len = " + len + " ***");
+		int[] arr = new int[len];
+		for (int i=0; i<len; i++)
+		{
+			//System.out.println("* n = " + n);
+			arr[i] = n / pow(b, len - 1 - i);
+			//System.out.printf("# arr[%d] = %d -> %c\n", i, arr[i], trans(arr[i], b));
+			//System.out.print(trans(getDigit(arr[i], b)));
+			System.out.print(trans(arr[i], b));
+			n = n % pow(b, len - 1 -i);
+		}
+		
+		
+	}
+
+}

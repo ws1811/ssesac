@@ -1,0 +1,18 @@
+package chap13_innerclass.sec05_innerinterface;
+
+class Button {
+	interface OnClickListener {
+		public abstract void onClick();
+	}
+	OnClickListener ocl;
+	public void setOcl(OnClickListener ocl) {
+		this.ocl = ocl;
+	}
+	void onClick() {
+		ocl.onClick();
+	}
+}
+
+public class ButtonApiExample {
+
+}

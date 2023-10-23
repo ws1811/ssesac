@@ -1,0 +1,15 @@
+package chap07_class;
+
+public class EffectOfPrimaryDataArgument {
+
+	public static void main(String[] args) {
+		int a = 3;
+		int result1 = twice(3);
+	}
+
+	private static int twice(int a) {
+		a = a * 2;
+		return a;
+	}
+
+}
